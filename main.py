@@ -30,8 +30,7 @@ def omikuji():
         "小凶",
         "大凶"
     ]
-    
-### コードいろいろ... ###
+    return {"result": omikuji_list[random.randrange(10)]}
 
 @app.get("/index")
 def index():
@@ -46,4 +45,3 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
-    return {"result": omikuji_list[random.randrange(10)]}
