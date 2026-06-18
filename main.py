@@ -47,5 +47,16 @@ def index():
     return HTMLResponse(content=html_content, status_code=200)
 
 @app.get("/hello")
-async def hello():
-    return {"message": "こんにちは！これはネットワークプログラミングの課題です。"}
+def hello():
+     html_content = """
+    <html>
+        <head>
+            <title>Some HTML in here</title>
+        </head>
+        <body>
+            <h1>This is netpro homework test</h1>
+            <h1>S H O W T E X E T</h1>
+        </body>
+    </html>
+    """
+    return HTMLResponse(content=html_content, status_code=200)
