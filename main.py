@@ -46,16 +46,16 @@ def index():
     """
     return HTMLResponse(content=html_content, status_code=200)
 
-@app.get("/hello")
-def hello():
-     html_content = """
+@app.post("/hello")
+async def hello():
+    html_content = """
     <html>
         <head>
-            <title>Some HTML in here</title>
+            <title>Hello Page</title>
         </head>
         <body>
             <h1>This is netpro homework test</h1>
-            <h1>S H O W T E X E T</h1>
+            <p>S H O W T E X T</p>
         </body>
     </html>
     """
