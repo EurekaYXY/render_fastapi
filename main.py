@@ -46,8 +46,8 @@ def index():
     """
     return HTMLResponse(content=html_content, status_code=200)
 
-@app.post("/hello")
-async def hello():
+@app.get("/hello")
+def hello():
     html_content = """
     <html>
         <head>
