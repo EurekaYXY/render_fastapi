@@ -46,6 +46,6 @@ def index():
     """
     return HTMLResponse(content=html_content, status_code=200)
 
-@app.post("/hello")
+@app.get("/hello")
 async def hello():
-    return {"message": "こんにちは！これはPOSTメソッドのテストです。"}
+    return {"message": "こんにちは！これはネットワークプログラミングの課題です。"}
